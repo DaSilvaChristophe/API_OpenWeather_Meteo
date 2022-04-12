@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Bootstrap v5 CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/99899ac305.js" crossorigin="anonymous"></script>
+    
+    <title>API OpenWeather - Météo</title>
+</head>
+<body>
+    <h1 class="text-white text-center mt-2 text-decoration-underline">Méteo</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 mx-auto">
+                <form>
+                    <div class="mt-3 text-center">
+                      <label for="ville" class="form-label text-white">Entrez votre ville</label>
+                      <input type="text" class="form-control" name="ville" id="ville" min-length="1" maxlength="163">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="text-white rounded px-4 py-1 my-3" id="submit-ville">Rechercher</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row mx-2">
+            <div class="col-6 box1 w-100 ">
+                <p id="city" class="box-city"></p>
+            </div>
+            <div class="col-6 border box2">
+                <p id="temp"class="box" data-bs-toggle="tooltip" data-bs-placement="top" title="Température"></p>
+            </div>
+            <div class="col-6 border box3">
+                <p id="humidity" class="box" data-bs-toggle="tooltip" data-bs-placement="top" title="Humidité"></p> 
+            </div>
+            <div class="col-6 border box4">
+                <p id="wind" class="box" data-bs-toggle="tooltip" data-bs-placement="top" title="Vent"></p>
+            </div>
+            <div class="col-6 border box5">
+                <p id="content" class="box" data-bs-toggle="tooltip" data-bs-placement="top" title="Description du temps" ></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
