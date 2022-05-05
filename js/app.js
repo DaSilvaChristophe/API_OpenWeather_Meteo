@@ -3,7 +3,7 @@ const apiKey = "c440ed9a20259d9dea2aa215b5c68a3d"
 /* function appel API OpenWheater (city en paramètres) */
 
 let apiCall = function (city){
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&limit=5&lang=fr&appid=${apiKey}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&limit=5&lang=fr&appid=${apiKey}&units=metric`)
     .then(res => res.json())
     .then(data => {
         console.log(data);
